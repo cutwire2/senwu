@@ -3,564 +3,692 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>高一生物学期末考试卷（福建省专用）</title>
+    <title>福建省高一生物学考模拟卷 | 优化图形 | 选择题+大量填空</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-
         body {
-            background: #eef5e9;
-            font-family: 'Segoe UI', 'Roboto', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #eef7ea;
+            font-family: 'Segoe UI', 'Roboto', 'Noto Sans', system-ui, sans-serif;
             padding: 30px 20px;
-            color: #1e2f1c;
+            color: #1e3a1a;
         }
-
-        .exam-container {
-            max-width: 1280px;
+        .paper {
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0, 32, 0, 0.2);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px -12px rgba(0, 32, 0, 0.25);
             overflow: hidden;
-            padding: 24px 28px 40px;
+            padding: 28px 32px 45px;
         }
-
-        /* 头部信息 */
-        .exam-header {
+        h1 {
+            font-size: 2rem;
+            color: #1f571f;
             text-align: center;
-            border-bottom: 3px solid #4caf50;
-            padding-bottom: 20px;
-            margin-bottom: 28px;
-        }
-
-        .exam-header h1 {
-            font-size: 1.9rem;
-            color: #2b5e2b;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .exam-header .sub {
-            color: #2e7d32;
-            font-weight: 500;
-            background: #e8f5e9;
+            border-bottom: 4px solid #6fbf4c;
             display: inline-block;
-            padding: 4px 18px;
-            border-radius: 40px;
-            font-size: 0.9rem;
+            width: 100%;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
         }
-
-        .info-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 20px;
-            background: #f1f8e9;
-            padding: 12px 20px;
+        .subhead {
+            text-align: center;
+            background: #eaf5e4;
+            padding: 8px 0;
+            border-radius: 60px;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin: 30px 0 15px 0;
+            padding-left: 14px;
+            border-left: 9px solid #4caf50;
+            color: #1a4a1a;
+        }
+        .section-desc {
+            font-size: 0.85rem;
+            color: #557a42;
+            background: #f9fff5;
+            padding: 5px 15px;
             border-radius: 28px;
+            display: inline-block;
+            margin-bottom: 20px;
         }
-
-        .total-score {
-            font-weight: bold;
-            background: #2b5e2b;
-            color: white;
-            padding: 5px 14px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        button {
-            background: #388e3c;
-            border: none;
-            padding: 8px 24px;
-            font-weight: 600;
-            font-size: 1rem;
-            border-radius: 40px;
-            color: white;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-family: inherit;
-        }
-
-        button:hover {
-            background: #2c6e2f;
-            transform: scale(1.02);
-        }
-
-        .reset-btn {
-            background: #ffa000;
-        }
-
-        .reset-btn:hover {
-            background: #e68900;
-        }
-
-        .score-card {
-            background: #e9f5e9;
-            padding: 12px 24px;
-            border-radius: 32px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .score-card span {
-            color: #1f5e2d;
-            font-size: 1.4rem;
-        }
-
-        /* 题目列表区 */
-        .questions-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-            margin-top: 20px;
-        }
-
-        /* 单个题目卡片 */
         .question-card {
             background: #ffffff;
             border-radius: 24px;
-            border: 1px solid #dcedc8;
-            padding: 18px 22px;
-            transition: all 0.1s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #cde2c1;
+            padding: 18px 24px;
+            margin-bottom: 20px;
+            transition: 0.1s;
         }
-
         .question-card.error-card {
-            background-color: #ffebee;
+            background-color: #fff0ee;
             border-left: 8px solid #e53935;
-            border-right: 1px solid #ffcdd2;
-            border-top: 1px solid #ffcdd2;
-            border-bottom: 1px solid #ffcdd2;
-            box-shadow: 0 4px 12px rgba(229, 57, 53, 0.15);
         }
-
-        .question-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 14px;
+        .q-header {
             display: flex;
             align-items: baseline;
             gap: 12px;
             flex-wrap: wrap;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
-
         .q-num {
             background: #c8e6c9;
-            padding: 2px 12px;
+            padding: 2px 14px;
             border-radius: 30px;
             font-size: 0.8rem;
-            color: #1b5e20;
         }
-
         .question-text {
+            font-size: 1rem;
             font-weight: 500;
-            color: #1c2c1a;
-            line-height: 1.4;
         }
-
+        .question-graphic {
+            margin: 12px 0 12px 20px;
+            background: #fefcf0;
+            border-radius: 20px;
+            padding: 8px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        canvas.choice-canvas {
+            background: #fef9e6;
+            border-radius: 16px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #d4e2c4;
+        }
         .options {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px 32px;
-            margin: 16px 0 10px;
-            padding-left: 12px;
+            gap: 20px 35px;
+            margin: 14px 0 8px 20px;
         }
-
         .option {
             display: flex;
             align-items: center;
             gap: 8px;
             cursor: pointer;
-            font-size: 0.95rem;
         }
-
         .option input {
+            accent-color: #2e7d32;
             width: 18px;
             height: 18px;
-            cursor: pointer;
-            accent-color: #2e7d32;
         }
-
         .feedback {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 0.8rem;
-            padding-left: 12px;
-            border-radius: 16px;
-            display: inline-block;
         }
-
-        .feedback .wrong-mark {
-            color: #c62828;
-            background: #ffefef;
-            padding: 3px 12px;
+        .wrong-mark {
+            background: #ffdede;
+            color: #b71c1c;
+            padding: 4px 14px;
+            border-radius: 24px;
+        }
+        .graphic-box {
+            background: #fefef4;
+            border-radius: 28px;
+            padding: 20px 20px 15px;
+            margin: 20px 0 25px;
+            border: 1px solid #deecce;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+        }
+        .graphic-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #2d662d;
+        }
+        canvas.fill-canvas {
+            display: block;
+            margin: 0 auto 15px auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #cde0bc;
+        }
+        .fill-inside {
+            background: #fafcf7;
             border-radius: 20px;
-            display: inline-block;
+            padding: 12px 18px;
+            margin-top: 12px;
+        }
+        .fill-item {
+            margin-bottom: 18px;
+            background: white;
+            border-radius: 20px;
+            padding: 14px 20px;
+            border: 1px solid #e2efda;
+        }
+        .fill-question {
             font-weight: 500;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
-
-        .feedback .correct-answer {
-            font-weight: 500;
-            color: #1e5a1e;
-            margin-left: 8px;
+        .fill-input {
+            width: 100%;
+            padding: 10px 16px;
+            border: 1.5px solid #cde2bd;
+            border-radius: 40px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: #fffef7;
         }
-
-        hr {
-            margin: 8px 0;
-            border-color: #e0f2e0;
+        .fill-input:focus {
+            outline: none;
+            border-color: #4caf50;
+            box-shadow: 0 0 0 2px rgba(76,175,80,0.2);
         }
-
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: #eef4e8;
+            padding: 12px 22px;
+            border-radius: 60px;
+            margin: 20px 0 25px;
+        }
+        button {
+            background: #388e3c;
+            border: none;
+            padding: 8px 24px;
+            font-weight: 600;
+            border-radius: 40px;
+            color: white;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #1f6d2b;
+            transform: scale(1.02);
+        }
+        .reset-choice {
+            background: #ffa000;
+        }
+        .reset-choice:hover { background: #e68900; }
+        .score-box {
+            background: white;
+            padding: 5px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #2a6e2a;
+            box-shadow: inset 0 0 0 1px #c6e2b8;
+        }
+        .ref-answer {
+            background: #edf7e7;
+            border-radius: 30px;
+            padding: 20px 24px;
+            margin-top: 30px;
+            border: 1px dashed #84b372;
+        }
+        .ref-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .answer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .answer-item {
+            background: white;
+            padding: 6px 15px;
+            border-radius: 36px;
+            font-size: 0.85rem;
+            border-left: 5px solid #6fbf4c;
+        }
         footer {
-            margin-top: 32px;
             text-align: center;
-            font-size: 0.8rem;
-            color: #6a6a6a;
-            border-top: 1px solid #d0e6c4;
-            padding-top: 20px;
-        }
-
-        @media (max-width: 700px) {
-            .exam-container {
-                padding: 16px;
-            }
-            .options {
-                gap: 12px;
-                flex-direction: column;
-            }
-            .question-card {
-                padding: 14px;
-            }
-            .info-bar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .action-buttons {
-                justify-content: center;
-            }
-        }
-
-        .status-badge {
             font-size: 0.75rem;
-            background: #eef2e6;
-            border-radius: 20px;
-            padding: 2px 10px;
+            margin-top: 28px;
+            color: #7ba06a;
         }
+        @media (max-width: 700px) {
+            .paper { padding: 18px; }
+            .options { flex-direction: column; gap: 8px; margin-left: 5px; }
+            .question-graphic { margin-left: 0; }
+        }
+        .small-note { font-size: 0.7rem; color: #688a58; margin-top: 5px; }
     </style>
 </head>
 <body>
-<div class="exam-container" id="examApp">
-    <div class="exam-header">
-        <h1>🌿 高一生物学 期末质量检测卷</h1>
-        <div class="sub">福建省普通高中学业水平合格性考试·样题</div>
-        <div style="margin-top: 12px; font-size: 0.85rem;">共100道选择题 | 每题1分 | 满分100分</div>
-    </div>
-    <div class="info-bar">
-        <div class="score-card" id="scoreDisplay">
-            📊 当前得分: <span id="scoreValue">—</span> / 100
-        </div>
-        <div class="action-buttons">
-            <button id="submitBtn">✅ 提交批改 · 标出错题</button>
-            <button id="resetBtn" class="reset-btn">🔄 清空作答</button>
+<div class="paper">
+    <h1>🌿 福建省普通高中学业水平合格性考试</h1>
+    <div class="subhead">生 物 模 拟 卷 · 高一 (学考难度)　|　选择题(含优化图形) 共50分 + 填空题60空(60分)</div>
+
+    <div class="action-bar">
+        <div class="score-box" id="choiceScoreDisplay">✅ 选择题得分: -- / 50</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button id="submitChoiceBtn">📌 提交选择题 · 标出错题</button>
+            <button id="resetChoiceBtn" class="reset-choice">🔄 清空选择题</button>
+            <button id="clearAllFillBtn" style="background:#789f6b;">🧽 清空所有填空题</button>
         </div>
     </div>
-    <div class="questions-list" id="questionsContainer"></div>
-    <footer>※ 提交后错误题目会标红背景，并显示正确答案。点击清空可重新作答。</footer>
+
+    <!-- 第Ⅰ卷 选择题 (25题，每题2分) -->
+    <div class="section-title">📖 第Ⅰ卷 选择题 (共25题，每题2分，共50分)</div>
+    <div class="section-desc">每小题只有一个正确选项，部分题目附有图形。提交后自动批改，错题标红并显示正确答案。</div>
+    <div id="choiceContainer"></div>
+
+    <!-- 第Ⅱ卷 填空题 (共60空) -->
+    <div class="section-title">✍️ 第Ⅱ卷 填空题 (共60空，每空1分，共60分)</div>
+    <div class="section-desc">请将答案填入横线，图形题根据图示填写。完成可对照底部参考答案自行评分。</div>
+
+    <!-- 图形1 植物细胞结构（精美重绘） -->
+    <div class="graphic-box">
+        <div class="graphic-title">🔬 图1 植物细胞亚显微结构模式图</div>
+        <canvas id="plantCellCanvas" class="fill-canvas" width="600" height="400" style="max-width:600px;"></canvas>
+        <div class="fill-inside">
+            <div class="fill-question"><strong>根据图1中数字标号，填写对应的细胞结构名称：</strong></div>
+            <div class="fill-item">① __________ (具有支持和保护作用)</div>
+            <div class="fill-item">② __________ (光合作用的场所)</div>
+            <div class="fill-item">③ __________ (细胞呼吸的主要场所)</div>
+            <div class="fill-item">④ __________ (内含细胞液，调节渗透压)</div>
+            <div class="fill-item">⑤ __________ (细胞代谢和遗传控制中心)</div>
+            <div class="fill-item">⑥ __________ (与细胞壁形成有关的细胞器)</div>
+        </div>
+    </div>
+
+    <!-- 图形2 遗传系谱图（规范重绘） -->
+    <div class="graphic-box">
+        <div class="graphic-title">🧬 图2 人类某遗传病系谱图（□正常男，○正常女，●患病女，■患病男）</div>
+        <canvas id="pedigreeCanvas" class="fill-canvas" width="600" height="300" style="max-width:600px;"></canvas>
+        <div class="fill-inside">
+            <div class="fill-question"><strong>分析系谱图，回答下列问题：</strong></div>
+            <div class="fill-item">① 该遗传病最可能的遗传方式是__________染色体__________性遗传（填“显”或“隐”）。</div>
+            <div class="fill-item">② 若用A/a表示基因，则Ⅱ-3的基因型是__________。</div>
+            <div class="fill-item">③ Ⅱ-4的基因型是__________。</div>
+            <div class="fill-item">④ Ⅲ-7的基因型是__________；Ⅲ-8的基因型是__________。</div>
+            <div class="fill-item">⑤ 若Ⅲ-8与一个正常男性（不携带致病基因）结婚，生一个患病孩子的概率是__________。</div>
+            <div class="fill-item">⑥ 系谱图中Ⅰ-1和Ⅰ-2再生一个患病男孩的概率是__________。</div>
+        </div>
+    </div>
+
+    <!-- 大量概念填空题 (剩余空数: 60-6-8 = 46空) -->
+    <div id="extraFillContainer"></div>
+
+    <!-- 参考答案区 -->
+    <div class="ref-answer">
+        <div class="ref-title">📎 填空题 · 参考答案（自行核对，每空1分）</div>
+        <div id="fillAnswerList" class="answer-grid"></div>
+        <div class="small-note">* 图形填空答案依据高中生物标准，遗传分析按常染色体显性遗传设定；简答题意思正确可酌情给分。</div>
+    </div>
+    <footer>✏️ 选择题提交后自动批改并标红错题；填空题请对照参考答案自行评分，点击清空可重新填写。</footer>
 </div>
 
 <script>
-    // ---------- 高一生物 100道高质量选择题 (涵盖分子与细胞、代谢、遗传基础、细胞生命历程等) ----------
-    // 每个题目：题干、选项数组[A,B,C,D]、正确答案(大写字母)
-    const QUESTIONS_DATA = [
-        { text: "细胞中含量最多的化合物是？", options: ["蛋白质", "水", "糖类", "无机盐"], answer: "B" },
-        { text: "植物细胞壁的主要成分是？", options: ["纤维素和果胶", "磷脂和蛋白质", "几丁质", "肽聚糖"], answer: "A" },
-        { text: "真核细胞与原核细胞最根本的区别是？", options: ["有无核膜包被的细胞核", "有无细胞壁", "有无核糖体", "有无细胞膜"], answer: "A" },
-        { text: "生命活动的主要能源物质是？", options: ["脂肪", "蛋白质", "糖类", "ATP"], answer: "C" },
-        { text: "蛋白质的基本组成单位是？", options: ["核苷酸", "氨基酸", "葡萄糖", "脂肪酸"], answer: "B" },
-        { text: "被称为细胞“动力工厂”的细胞器是？", options: ["叶绿体", "线粒体", "内质网", "高尔基体"], answer: "B" },
-        { text: "植物进行光合作用的场所是？", options: ["线粒体", "液泡", "叶绿体", "细胞核"], answer: "C" },
-        { text: "有氧呼吸的主要场所是？", options: ["细胞质基质", "线粒体", "核糖体", "内质网"], answer: "B" },
-        { text: "动物细胞无氧呼吸的产物是？", options: ["乳酸", "酒精和CO₂", "水和CO₂", "丙酮酸"], answer: "A" },
-        { text: "细胞膜的基本骨架是？", options: ["磷脂双分子层", "蛋白质双分子层", "糖蛋白", "胆固醇"], answer: "A" },
-        { text: "酶的作用机理是？", options: ["提供能量", "降低反应活化能", "改变反应方向", "提高反应温度"], answer: "B" },
-        { text: "ATP的结构简式是？", options: ["A-P~P~P", "A-P-P-P", "A～P～P～P", "A-P~P"], answer: "A" },
-        { text: "叶绿体色素提取实验中，用于提取色素的试剂是？", options: ["层析液", "无水乙醇", "碳酸钙", "二氧化硅"], answer: "B" },
-        { text: "有丝分裂过程中，染色体数目加倍发生在？", options: ["前期", "中期", "后期", "末期"], answer: "C" },
-        { text: "细胞分化过程中，一般不会发生变化的是？", options: ["细胞的形态", "细胞的结构", "细胞的功能", "细胞的遗传物质"], answer: "D" },
-        { text: "下列哪项不是癌细胞的特征？", options: ["无限增殖", "易扩散转移", "细胞膜上糖蛋白减少", "细胞代谢缓慢"], answer: "D" },
-        { text: "人体内衰老细胞的特点是？", options: ["水分减少，代谢减慢", "酶活性升高", "细胞核体积变小", "细胞膜通透性不变"], answer: "A" },
-        { text: "孟德尔分离定律的实质是？", options: ["等位基因随同源染色体分开而分离", "非同源染色体自由组合", "基因突变", "性状分离"], answer: "A" },
-        { text: "一对相对性状的杂合子（Aa）自交，子代中纯合子比例为？", options: ["1/2", "1/4", "3/4", "1"], answer: "A" },
-        { text: "DNA分子的双螺旋结构中，碱基配对原则是？", options: ["A-G, T-C", "A-T, G-C", "A-C, G-T", "A-U, G-C"], answer: "B" },
-        { text: "基因是有遗传效应的？", options: ["DNA片段", "RNA片段", "蛋白质片段", "染色体片段"], answer: "A" },
-        { text: "转运RNA（tRNA）的功能是？", options: ["转运氨基酸", "转录DNA", "催化反应", "储存遗传信息"], answer: "A" },
-        { text: "细胞呼吸释放的能量大部分去向是？", options: ["储存于ATP", "以热能形式散失", "用于合成有机物", "转移给葡萄糖"], answer: "B" },
-        { text: "光合作用光反应阶段产生的物质有？", options: ["O₂、[H]、ATP", "CO₂、葡萄糖", "H₂O、ATP", "C₃、C₅"], answer: "A" },
-        { text: "下列属于原核生物的是？", options: ["酵母菌", "大肠杆菌", "衣藻", "草履虫"], answer: "B" },
-        { text: "组成核酸的基本单位是？", options: ["核糖", "脱氧核苷酸", "核苷酸", "氨基酸"], answer: "C" },
-        { text: "细胞中“生产蛋白质的机器”是？", options: ["高尔基体", "核糖体", "内质网", "溶酶体"], answer: "B" },
-        { text: "在观察植物细胞质壁分离实验中，常用材料是？", options: ["洋葱鳞片叶外表皮", "根尖分生区", "叶肉细胞", "口腔上皮细胞"], answer: "A" },
-        { text: "胰岛素是一种蛋白质，其合成和分泌过程中，参与的细胞器有？", options: ["核糖体、内质网、高尔基体、线粒体", "核糖体、中心体、高尔基体", "内质网、溶酶体、线粒体", "核糖体、液泡、叶绿体"], answer: "A" },
-        { text: "在探究酵母菌细胞呼吸方式的实验中，澄清石灰水的作用是？", options: ["检测CO₂产生", "检测酒精", "检测氧气", "除去杂菌"], answer: "A" },
-        { text: "下列不属于脂质的是？", options: ["脂肪", "磷脂", "性激素", "淀粉"], answer: "D" },
-        { text: "血红蛋白含有的重要无机盐离子是？", options: ["Fe²⁺", "Mg²⁺", "Ca²⁺", "I⁻"], answer: "A" },
-        { text: "下列关于细胞核的叙述，正确的是？", options: ["核膜是单层膜结构", "核仁与核糖体的形成有关", "DNA通过核孔进出细胞核", "染色质和染色体是不同物质"], answer: "B" },
-        { text: "自由扩散与协助扩散的共同点是？", options: ["顺浓度梯度运输", "需要载体蛋白", "消耗能量", "逆浓度梯度运输"], answer: "A" },
-        { text: "主动运输的意义在于？", options: ["维持细胞内外浓度差", "只吸收大分子物质", "排出代谢废物", "被动运输"], answer: "A" },
-        { text: "关于细胞全能性的叙述，错误的是？", options: ["受精卵具有全能性", "高度分化的植物细胞仍具有全能性", "动物体细胞核具有全能性", "已分化的细胞不再具有分裂能力"], answer: "D" },
-        { text: "减数分裂过程中，同源染色体联会发生在？", options: ["减数第一次分裂前期", "减数第一次分裂中期", "减数第二次分裂后期", "间期"], answer: "A" },
-        { text: "人类红绿色盲属于哪种遗传病？", options: ["常染色体隐性", "常染色体显性", "伴X隐性", "伴Y遗传"], answer: "C" },
-        { text: "遗传信息的转录过程以哪条链为模板？", options: ["DNA的一条链", "mRNA", "tRNA", "rRNA"], answer: "A" },
-        { text: "在翻译过程中，起始密码子位于？", options: ["DNA上", "mRNA上", "tRNA上", "rRNA上"], answer: "B" },
-        { text: "基因突变的主要特点是？", options: ["低频性、随机性", "定向性", "高频率发生", "不可逆性"], answer: "A" },
-        { text: "猫叫综合征属于哪种变异？", options: ["基因突变", "染色体结构缺失", "基因重组", "染色体数目变异"], answer: "B" },
-        { text: "杂交育种所依据的主要遗传学原理是？", options: ["基因突变", "基因重组", "染色体变异", "基因工程"], answer: "B" },
-        { text: "诱变育种常用射线或化学物质处理，目的是？", options: ["诱发基因突变", "改变染色体数目", "增加有利性状", "定向改变性状"], answer: "A" },
-        { text: "现代生物进化理论认为，生物进化的基本单位是？", options: ["个体", "种群", "群落", "生态系统"], answer: "B" },
-        { text: "自然选择直接作用于生物的？", options: ["基因型", "表现型", "等位基因", "DNA"], answer: "B" },
-        { text: "隔离在物种形成中的主要作用是？", options: ["阻止种群间基因交流", "促进基因突变", "改变基因频率", "导致定向变异"], answer: "A" },
-        { text: "一个种群中全部个体所含的全部基因称为？", options: ["基因库", "基因频率", "基因型频率", "基因组"], answer: "A" },
-        { text: "在生态系统中，碳循环的主要形式是？", options: ["CO₂", "碳酸盐", "有机物", "单质碳"], answer: "A" },
-        { text: "植物根尖分生区细胞不具有的细胞器是？", options: ["线粒体", "液泡", "核糖体", "高尔基体"], answer: "B" },
-        { text: "夏季晴朗的中午，植物光合作用速率下降的主要原因是？", options: ["光照过强", "CO₂供应不足", "水分过多", "温度过低"], answer: "B" },
-        { text: "以下关于细胞凋亡的叙述，正确的是？", options: ["由基因决定的程序性死亡", "细胞坏死属于凋亡", "只发生在衰老个体", "受外界伤害引起的"], answer: "A" },
-        { text: "DNA复制时期是？", options: ["G1期", "S期", "G2期", "M期"], answer: "B" },
-        { text: "人的肌肉细胞和神经细胞中，DNA和RNA是否相同？", options: ["DNA相同，RNA不同", "DNA不同，RNA相同", "DNA和RNA都相同", "DNA和RNA都不同"], answer: "A" },
-        { text: "下列哪种物质进入细胞需要载体蛋白但不需要能量？", options: ["葡萄糖进入红细胞", "钠离子出神经细胞", "氨基酸进入小肠上皮细胞", "氧气进入肺泡"], answer: "A" },
-        { text: "高倍显微镜下观察黑藻叶绿体，不需要染色可直接观察的原因是？", options: ["叶绿体有颜色", "细胞核明显", "液泡大", "细胞壁透明"], answer: "A" },
-        { text: "在细胞周期中，纺锤体形成于？", options: ["前期", "中期", "后期", "末期"], answer: "A" },
-        { text: "人体进行有氧呼吸产生CO₂的场所是？", options: ["细胞质基质", "线粒体基质", "线粒体内膜", "细胞核"], answer: "B" },
-        { text: "下列化合物中，属于二糖的是？", options: ["葡萄糖", "果糖", "蔗糖", "淀粉"], answer: "C" },
-        { text: "抗体在细胞内合成和分泌依次经过的细胞结构是？", options: ["核糖体→内质网→高尔基体→细胞膜", "核糖体→高尔基体→内质网→细胞膜", "内质网→核糖体→高尔基体→细胞膜", "高尔基体→核糖体→内质网→细胞膜"], answer: "A" },
-        { text: "在分离叶绿体色素的实验中，滤纸条上最上方的色素带是？", options: ["叶绿素a", "叶绿素b", "叶黄素", "胡萝卜素"], answer: "D" },
-        { text: "下列哪种物质不属于内环境的成分？", options: ["血红蛋白", "葡萄糖", "无机盐", "尿素"], answer: "A" },
-        { text: "植物向光性的原因是？", options: ["背光侧生长素分布多，生长快", "向光侧生长素多", "背光侧生长素少", "向光侧细胞分裂快"], answer: "A" },
-        { text: "在生态系统中，生产者固定的能量去向不包括？", options: ["流入下一营养级", "用于自身呼吸消耗", "被分解者利用", "全部传递给人类"], answer: "D" },
-        { text: "病毒没有细胞结构，其生命活动依赖？", options: ["活细胞", "培养基", "自身代谢", "核酸"], answer: "A" },
-        { text: "关于生物膜系统的叙述，错误的是？", options: ["细胞膜属于生物膜系统", "核膜属于生物膜系统", "中心体属于生物膜系统", "生物膜在结构和功能上联系"], answer: "C" },
-        { text: "植物通过蒸腾作用散失水分的结构是？", options: ["气孔", "角质层", "叶脉", "表皮细胞"], answer: "A" },
-        { text: "光合作用暗反应发生的场所是？", options: ["叶绿体基粒", "叶绿体基质", "类囊体薄膜", "细胞质基质"], answer: "B" },
-        { text: "在细胞有丝分裂末期，植物细胞形成细胞板，细胞板扩展形成？", options: ["细胞壁", "细胞膜", "核膜", "纺锤体"], answer: "A" },
-        { text: "下列各组性状中，属于相对性状的是？", options: ["豌豆的圆粒与皱粒", "狗的长毛与卷毛", "水稻的抗病与抗倒伏", "人的双眼皮与大眼睛"], answer: "A" },
-        { text: "杂合高茎豌豆（Dd）自交，后代高茎与矮茎比例约为？", options: ["3:1", "1:1", "1:2:1", "全部高茎"], answer: "A" },
-        { text: "下列哪种育种方法能明显缩短育种年限？", options: ["杂交育种", "单倍体育种", "诱变育种", "多倍体育种"], answer: "B" },
-        { text: "人体内环境稳态的调节机制是？", options: ["神经-体液-免疫调节", "只有神经调节", "只有体液调节", "只有免疫调节"], answer: "A" },
-        { text: "下列关于酶的叙述，正确的是？", options: ["酶都是蛋白质", "酶在细胞外不能发挥作用", "酶具有高效性和专一性", "酶能提供化学反应的活化能"], answer: "C" },
-        { text: "在“探究温度对淀粉酶活性的影响”实验中，检测试剂应选用？", options: ["斐林试剂", "碘液", "双缩脲试剂", "苏丹III"], answer: "B" },
-        { text: "当人剧烈运动时，骨骼肌细胞进行无氧呼吸产生？", options: ["酒精和CO₂", "乳酸", "丙酮酸", "葡萄糖"], answer: "B" },
-        { text: "有丝分裂过程中，观察染色体形态和数目的最佳时期是？", options: ["前期", "中期", "后期", "末期"], answer: "B" },
-        { text: "在细胞分化过程中，基因的表达情况？", options: ["不同细胞基因选择性表达", "所有基因均表达", "基因发生突变", "基因数量减少"], answer: "A" },
-        { text: "下列哪项是伴X显性遗传病的特点？", options: ["女性患者多于男性", "男性患者多于女性", "男女患病概率相等", "隔代遗传"], answer: "A" },
-        { text: "在双链DNA分子中，若一条链上A+T占该链的40%，则整个DNA中G+C的比例为？", options: ["60%", "40%", "30%", "20%"], answer: "A" },
-        { text: "生物多样性主要包括三个层次：遗传多样性、物种多样性和？", options: ["生态系统多样性", "种群多样性", "基因多样性", "群落多样性"], answer: "A" },
-        { text: "农田生态系统中，人们除草、灭虫的目的是？", options: ["调整能量流动方向，使能量流向对人类有益部分", "增强农作物的光合作用", "提高土壤肥力", "增加生物多样性"], answer: "A" },
-        { text: "脂肪被彻底氧化分解的产物是？", options: ["CO₂和H₂O", "甘油和脂肪酸", "乳酸", "丙酮酸"], answer: "A" },
-        { text: "组成DNA分子中，不含氮元素的成分是？", options: ["磷酸", "脱氧核糖", "含氮碱基", "核苷酸"], answer: "A" },
-        { text: "在细胞中，与能量转换直接相关的细胞器是？", options: ["叶绿体和线粒体", "核糖体和高尔基体", "中心体和溶酶体", "内质网和液泡"], answer: "A" },
-        { text: "下列属于条件反射的是？", options: ["望梅止渴", "膝跳反射", "缩手反射", "吮吸反射"], answer: "A" },
-        { text: "用15N标记的一个DNA分子，在14N培养基中复制2次，含15N的DNA分子占？", options: ["1/2", "1/4", "1/8", "1"], answer: "A" },
-        { text: "一个基因型为AaBb（独立遗传）的个体，产生AB配子的概率是？", options: ["1/4", "1/2", "1/8", "3/4"], answer: "A" },
-        { text: "在食物链“草→兔→狐”中，狐属于？", options: ["初级消费者", "次级消费者", "三级消费者", "生产者"], answer: "B" },
-        { text: "在生态系统中，碳从无机环境进入生物群落的途径主要是？", options: ["光合作用", "呼吸作用", "分解作用", "燃烧"], answer: "A" },
-        { text: "关于细胞衰老的学说中，目前被广泛接受的有？", options: ["端粒学说和自由基学说", "自然选择学说", "中心法则", "细胞全能性学说"], answer: "A" },
-        { text: "染色体的主要组成成分是？", options: ["DNA和蛋白质", "DNA和RNA", "RNA和蛋白质", "脂质和蛋白质"], answer: "A" },
-        { text: "人体血糖浓度升高时，起降低血糖作用的激素是？", options: ["胰岛素", "胰高血糖素", "肾上腺素", "生长激素"], answer: "A" },
-        { text: "森林中的植物有垂直分层现象，主要影响因素是？", options: ["光照强度", "温度", "湿度", "土壤"], answer: "A" },
-        { text: "基因工程中，常用的“剪刀”和“针线”分别是？", options: ["限制酶和DNA连接酶", "DNA聚合酶和RNA聚合酶", "解旋酶和连接酶", "蛋白酶和脂肪酶"], answer: "A" },
-        { text: "某DNA分子中，腺嘌呤占30%，则胞嘧啶占？", options: ["20%", "30%", "40%", "50%"], answer: "A" },
-        { text: "在种群数量“S”型增长曲线中，种群增长速率最快的点是？", options: ["K/2", "K值", "开始阶段", "环境容纳量"], answer: "A" },
-        { text: "与有丝分裂相比，减数分裂过程中特有的现象是？", options: ["同源染色体联会", "染色体复制", "着丝粒分裂", "纺锤体形成"], answer: "A" }
+    // ======================== 选择题库 (25题，每题2分) ========================
+    const choiceQuestions = [
+        { text: "观察植物细胞模式图（下图），图中①所指结构的主要功能是？", hasGraphic: "plantCellSimple", options: ["支持和保护", "光合作用", "呼吸作用", "物质运输"], answer: "A" },
+        { text: "细胞中大多数生命活动所需能量直接来自哪种物质？", hasGraphic: false, options: ["葡萄糖", "ATP", "脂肪", "蛋白质"], answer: "B" },
+        { text: "植物细胞壁的主要成分是？", hasGraphic: false, options: ["纤维素和果胶", "磷脂双分子层", "肽聚糖", "几丁质"], answer: "A" },
+        { text: "真核细胞与原核细胞最根本的区别是？", hasGraphic: false, options: ["有无核膜包被的细胞核", "有无细胞壁", "有无核糖体", "有无细胞膜"], answer: "A" },
+        { text: "下图表示某类酶活性受温度影响的曲线，图中a点对应的酶活性特点是？", hasGraphic: "enzymeCurve", options: ["活性最高", "活性为零，但空间结构未破坏", "活性低是因为低温抑制", "酶已变性失活"], answer: "C" },
+        { text: "在“观察植物细胞质壁分离”实验中，常用材料是？", hasGraphic: false, options: ["洋葱鳞片叶外表皮", "根尖分生区", "叶肉细胞", "口腔上皮细胞"], answer: "A" },
+        { text: "有氧呼吸产生CO₂的场所是？", hasGraphic: false, options: ["细胞质基质", "线粒体基质", "线粒体内膜", "叶绿体基质"], answer: "B" },
+        { text: "光合作用光反应为暗反应提供的物质是？", hasGraphic: false, options: ["ATP和NADPH", "CO₂和H₂O", "O₂和ATP", "葡萄糖和NADPH"], answer: "A" },
+        { text: "DNA分子中，碱基配对原则是？", hasGraphic: false, options: ["A-T, G-C", "A-U, G-C", "A-C, G-T", "A-G, T-C"], answer: "A" },
+        { text: "下图为某遗传病的系谱简图，根据图形判断该病最可能的遗传方式是？", hasGraphic: "pedigreeSimple", options: ["常染色体显性", "常染色体隐性", "伴X显性", "伴X隐性"], answer: "A" },
+        { text: "下列属于相对性状的是？", hasGraphic: false, options: ["豌豆的高茎与矮茎", "狗的长毛与卷毛", "水稻抗病与抗倒伏", "人的双眼皮与大眼睛"], answer: "A" },
+        { text: "人体内环境稳态的主要调节机制是？", hasGraphic: false, options: ["神经-体液-免疫调节", "神经调节", "体液调节", "自身调节"], answer: "A" },
+        { text: "细胞有丝分裂后期主要特征是？", hasGraphic: false, options: ["着丝粒分裂，姐妹染色单体分离", "染色体复制", "核膜重建", "出现纺锤体"], answer: "A" },
+        { text: "酶的作用机理是？", hasGraphic: false, options: ["降低化学反应的活化能", "提供反应能量", "提高反应温度", "改变反应平衡点"], answer: "A" },
+        { text: "下图表示光合作用过程示意图，图中②代表的是？", hasGraphic: "photosynthesisSimple", options: ["氧气", "NADPH", "ATP", "CO₂"], answer: "B" },
+        { text: "基因突变主要发生在细胞分裂的？", hasGraphic: false, options: ["间期DNA复制时", "前期", "中期", "后期"], answer: "A" },
+        { text: "自然选择直接作用于生物的？", hasGraphic: false, options: ["表现型", "基因型", "等位基因", "DNA序列"], answer: "A" },
+        { text: "血红蛋白分子中含有的重要无机盐离子是？", hasGraphic: false, options: ["Fe²⁺", "Mg²⁺", "Ca²⁺", "I⁻"], answer: "A" },
+        { text: "减数分裂过程中，同源染色体联会发生在？", hasGraphic: false, options: ["减数第一次分裂前期", "减数第一次分裂中期", "减数第二次分裂后期", "间期"], answer: "A" },
+        { text: "如图表示细胞膜流动镶嵌模型，图中③代表的是？", hasGraphic: "membraneModel", options: ["磷脂双分子层", "糖蛋白", "载体蛋白", "胆固醇"], answer: "A" },
+        { text: "人类红绿色盲遗传属于？", hasGraphic: false, options: ["伴X隐性遗传", "常染色体隐性", "伴Y遗传", "伴X显性"], answer: "A" },
+        { text: "生物多样性不包括？", hasGraphic: false, options: ["蛋白质多样性", "遗传多样性", "物种多样性", "生态系统多样性"], answer: "A" },
+        { text: "在食物链“草→蝗虫→青蛙→蛇”中，青蛙属于？", hasGraphic: false, options: ["初级消费者", "次级消费者", "三级消费者", "生产者"], answer: "B" },
+        { text: "基因工程中常用的“分子剪刀”是？", hasGraphic: false, options: ["DNA连接酶", "限制性内切酶", "DNA聚合酶", "解旋酶"], answer: "B" },
+        { text: "细胞分化过程中，一般不会发生改变的是？", hasGraphic: false, options: ["细胞的形态结构", "细胞的功能", "细胞的遗传物质", "蛋白质种类"], answer: "C" }
     ];
 
-    // 确保恰好100题 (目前数据从0到99共100个，若不足可补，上面手动保证100)
-    // 补充验证: 已有多少?
-    console.log("题库数量:", QUESTIONS_DATA.length);
-    // 如果缺少可动态补齐，但是上面共100题，完整校验
-    // 确保100道
-    if(QUESTIONS_DATA.length < 100){
-        // 安全补偿，但已经100
-        for(let i=QUESTIONS_DATA.length; i<100; i++){
-            QUESTIONS_DATA.push({ text: "补充题: 细胞生命活动的主要能源物质是？", options: ["ATP", "葡萄糖", "脂肪", "蛋白质"], answer: "B" });
+    let choiceSelections = new Array(choiceQuestions.length).fill(null);
+    let choiceSubmitted = false;
+
+    // ======================== 填空题数据 (共60空) ========================
+    const graphicAnswers = [
+        "细胞壁", "叶绿体", "线粒体", "液泡", "细胞核", "高尔基体",
+        "常染色体显性", "Aa", "aa", "Aa或AA", "aa", "0", "1/4"
+    ];
+    const extraFillQuestions = [
+        { text: "细胞生命活动所需能量大约95%来自___________ (细胞器)。", answer: "线粒体" },
+        { text: "酶催化作用具有高效性、专一性和作用条件___________。", answer: "温和" },
+        { text: "DNA复制时，遵循碱基互补配对原则，A与___________配对。", answer: "T" },
+        { text: "基因通过控制___________的合成来控制生物性状。", answer: "蛋白质" },
+        { text: "现代生物进化理论认为，生物进化的基本单位是___________。", answer: "种群" },
+        { text: "人体内环境主要包括血浆、组织液和___________。", answer: "淋巴液" },
+        { text: "植物激素中，具有促进果实发育和防止落花落果的是___________。", answer: "生长素" },
+        { text: "有氧呼吸第三阶段在线粒体的___________上进行，生成大量ATP。", answer: "内膜" },
+        { text: "孟德尔获得成功的原因之一选用了___________作为实验材料。", answer: "豌豆" },
+        { text: "生态系统的能量流动特点是___________流动和逐级递减。", answer: "单向" },
+        { text: "细胞衰老后细胞核体积___________ (填“变大”或“变小”)。", answer: "变大" },
+        { text: "在“探究温度对淀粉酶活性影响”实验中，常用___________试剂检测淀粉是否水解。", answer: "碘液" },
+        { text: "真核细胞中，遗传信息转录的主要场所是___________。", answer: "细胞核" },
+        { text: "一对正常夫妇生了一个白化病孩子（致病基因隐性），则这对夫妇的基因型都是___________ (用A/a表示)。", answer: "Aa" },
+        { text: "染色体结构变异包括缺失、重复、倒位和___________。", answer: "易位" },
+        { text: "在群落中，植物由于对光照需求不同形成垂直结构，主要影响因素是___________。", answer: "光照" },
+        { text: "生态系统中，碳循环的主要形式是___________。", answer: "二氧化碳(CO₂)" },
+        { text: "在细胞免疫中，___________细胞能裂解靶细胞。", answer: "效应T" },
+        { text: "生长素在植物体内运输方式为___________运输 (从形态学上端向下端)。", answer: "极性" },
+        { text: "细胞膜的基本骨架是___________。", answer: "磷脂双分子层" },
+        { text: "叶绿体色素提取实验中，用于提取色素的试剂是___________。", answer: "无水乙醇" },
+        { text: "基因重组通常发生在减数第一次分裂的___________期。", answer: "四分体(或前期)" },
+        { text: "人类猫叫综合征是由___________结构变异引起的。", answer: "染色体缺失" },
+        { text: "杂交育种所依据的主要遗传学原理是___________。", answer: "基因重组" },
+        { text: "诱变育种常用射线处理，主要诱发___________。", answer: "基因突变" },
+        { text: "一个种群中全部个体所含有的全部基因叫做___________。", answer: "基因库" },
+        { text: "现代生物进化理论认为，生物进化的方向由___________决定。", answer: "自然选择" },
+        { text: "兴奋在神经元之间传递的结构是___________。", answer: "突触" },
+        { text: "胰岛素能___________血糖浓度（填“升高”或“降低”）。", answer: "降低" },
+        { text: "植物缺___________（元素）时叶片发黄，因为该元素是叶绿素的组成成分。", answer: "镁(Mg)" },
+        { text: "有丝分裂末期，植物细胞形成___________扩展形成细胞壁。", answer: "细胞板" },
+        { text: "在细胞周期中，DNA复制发生在___________期。", answer: "间(S)" },
+        { text: "生物膜系统包括细胞膜、核膜和___________等结构。", answer: "细胞器膜" },
+        { text: "ATP的结构简式是___________。", answer: "A-P~P~P" },
+        { text: "细胞呼吸释放的能量大部分以___________形式散失。", answer: "热能" },
+        { text: "光合作用暗反应发生的场所是___________。", answer: "叶绿体基质" },
+        { text: "在双链DNA分子中，若A占30%，则G占___________%。", answer: "20" },
+        { text: "一个基因型为AaBb（独立遗传）的个体，产生AB配子的概率是___________。", answer: "1/4" },
+        { text: "种群在理想条件下增长曲线呈___________型。", answer: "J" },
+        { text: "生态系统的组成成分包括非生物的物质和能量、生产者、消费者和___________。", answer: "分解者" },
+        { text: "全球性生态环境问题主要包括全球变暖、臭氧层破坏、___________等（写一个）。", answer: "生物多样性锐减" },
+        { text: "DNA分子的空间结构是___________双螺旋结构。", answer: "双螺旋" },
+        { text: "在分泌蛋白合成过程中，起交通枢纽作用的细胞器是___________。", answer: "高尔基体" },
+        { text: "细胞凋亡是由___________决定的细胞自动结束生命的过程。", answer: "基因" },
+        { text: "人类红绿色盲基因位于___________染色体上。", answer: "X" },
+        { text: "植物向光性的原因是背光侧生长素含量较___________ (高/低)。", answer: "高" }
+    ];
+
+    // 构建填空题DOM
+    function buildAllFillInputs() {
+        let graphicInputs = document.querySelectorAll(".graphic-box .fill-item .fill-input");
+        for (let i = 0; i < graphicInputs.length; i++) graphicInputs[i].id = `graphic_fill_${i}`;
+        const extraContainer = document.getElementById("extraFillContainer");
+        extraContainer.innerHTML = "";
+        for (let i = 0; i < extraFillQuestions.length; i++) {
+            const q = extraFillQuestions[i];
+            const div = document.createElement("div");
+            div.className = "fill-item";
+            div.innerHTML = `<div class="fill-question">${i+1+14}. ${q.text}</div><input type="text" class="fill-input" id="fill_extra_${i}" placeholder="填写答案" autocomplete="off">`;
+            extraContainer.appendChild(div);
         }
-    }else if(QUESTIONS_DATA.length > 100){
-        QUESTIONS_DATA.length = 100;
+    }
+    function renderAnswerReference() {
+        const ansContainer = document.getElementById("fillAnswerList");
+        ansContainer.innerHTML = "";
+        const graphicAnsDesc = [
+            "图1-①: 细胞壁", "图1-②: 叶绿体", "图1-③: 线粒体", "图1-④: 液泡", "图1-⑤: 细胞核", "图1-⑥: 高尔基体",
+            "遗传图-①: 常染色体显性", "遗传图-②: Aa", "遗传图-③: aa", "遗传图-④: Aa或AA", "遗传图-⑤: aa", "遗传图-⑥: 0", "遗传图-⑦: 1/4"
+        ];
+        const extraAnswers = extraFillQuestions.map((q, idx) => `${idx+15}. ${q.answer}`);
+        [...graphicAnsDesc, ...extraAnswers].forEach(ref => {
+            const div = document.createElement("div");
+            div.className = "answer-item";
+            div.innerHTML = ref;
+            ansContainer.appendChild(div);
+        });
+    }
+    function clearAllFill() {
+        for (let i = 0; i < 14; i++) { const inp = document.getElementById(`graphic_fill_${i}`); if(inp) inp.value = ""; }
+        for (let i = 0; i < extraFillQuestions.length; i++) { const inp = document.getElementById(`fill_extra_${i}`); if(inp) inp.value = ""; }
     }
 
-    // 全局状态
-    let userSelections = new Array(100).fill(null);   // 存储每道题选的选项 A/B/C/D
-    let submitted = false;   // 是否已批改
+    // =============== 精美绘图函数 (符合生物学内容) ===============
+    function drawPlantCellDetailed() {
+        const canvas = document.getElementById("plantCellCanvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const w = canvas.clientWidth, h = canvas.clientHeight;
+        canvas.width = w; canvas.height = h;
+        ctx.clearRect(0,0,w,h);
+        // 细胞壁 (厚边框)
+        ctx.strokeStyle = "#8B5A2B";
+        ctx.lineWidth = 3;
+        ctx.strokeRect(25,25,w-50,h-50);
+        ctx.fillStyle = "#FFF8E7";
+        ctx.fillRect(25,25,w-50,h-50);
+        // 细胞核
+        ctx.fillStyle = "#FFE0B5";
+        ctx.beginPath(); ctx.ellipse(150,130,28,35,0,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#D2691E"; ctx.font = "bold 14px 'Segoe UI'"; ctx.fillText("⑤",145,125);
+        ctx.fillStyle = "#B97F44"; ctx.beginPath(); ctx.arc(150,130,8,0,2*Math.PI); ctx.fill(); // 核仁
+        // 叶绿体
+        ctx.fillStyle = "#A8D08D";
+        ctx.beginPath(); ctx.ellipse(350,110,42,25,0,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#3C763D"; for(let i=0;i<3;i++) ctx.fillRect(340+5*i,105,3,12); // 基粒
+        ctx.fillStyle = "#2E6B2E"; ctx.fillText("②",345,105);
+        // 线粒体
+        ctx.fillStyle = "#E3BC8F";
+        ctx.beginPath(); ctx.ellipse(450,210,35,22,0,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#A5571E"; ctx.beginPath(); for(let i=0;i<3;i++) ctx.moveTo(450-15,210-5+i*5), ctx.lineTo(450+15,210-5+i*5); ctx.stroke();
+        ctx.fillText("③",445,206);
+        // 液泡
+        ctx.fillStyle = "#C5E0F0";
+        ctx.beginPath(); ctx.ellipse(240,270,55,40,0,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#2B528B"; ctx.fillText("④",235,266);
+        // 高尔基体
+        ctx.fillStyle = "#DDB582"; for(let i=0;i<4;i++) ctx.fillRect(480,80,15,5+2*i);
+        ctx.fillStyle = "#80582E"; ctx.fillText("⑥",490,78);
+        // 标注数字①细胞壁旁
+        ctx.fillStyle = "#5E7632"; ctx.fillText("①",35,45);
+        ctx.fillStyle = "#4A5E2E"; ctx.font = "italic 12px sans-serif";
+        ctx.fillText("细胞壁",30,65); ctx.fillText("叶绿体",340,80); ctx.fillText("线粒体",445,190);
+        ctx.fillText("液泡",220,250); ctx.fillText("细胞核",130,110); ctx.fillText("高尔基体",485,70);
+    }
 
-    // DOM 元素
-    const questionsContainer = document.getElementById('questionsContainer');
-    const submitBtn = document.getElementById('submitBtn');
-    const resetBtn = document.getElementById('resetBtn');
-    const scoreSpan = document.getElementById('scoreValue');
-
-    // 渲染所有题目
-    function renderQuestions() {
-        questionsContainer.innerHTML = '';
-        for (let i = 0; i < QUESTIONS_DATA.length; i++) {
-            const q = QUESTIONS_DATA[i];
-            const card = document.createElement('div');
-            card.className = 'question-card';
-            if (submitted && userSelections[i] !== null && userSelections[i] !== q.answer) {
-                card.classList.add('error-card');
+    function drawPedigreeDetailed() {
+        const canvas = document.getElementById("pedigreeCanvas");
+        if(!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const w = canvas.clientWidth, h = canvas.clientHeight;
+        canvas.width = w; canvas.height = h;
+        ctx.clearRect(0,0,w,h);
+        ctx.fillStyle = "#FAFAF0"; ctx.fillRect(0,0,w,h);
+        const drawPerson = (x, y, gender, affected) => {
+            ctx.fillStyle = "white"; ctx.strokeStyle = "#333"; ctx.lineWidth=1.5;
+            if(gender === 'male') ctx.fillRect(x-10, y-12, 20, 20);
+            else { ctx.beginPath(); ctx.arc(x, y, 11, 0, 2*Math.PI); ctx.fill(); ctx.stroke(); }
+            if(affected){
+                ctx.fillStyle = "#222";
+                if(gender === 'male') ctx.fillRect(x-10, y-12, 20, 20);
+                else { ctx.beginPath(); ctx.arc(x, y, 11, 0, 2*Math.PI); ctx.fill(); }
             }
-            card.setAttribute('data-qid', i);
+            ctx.fillStyle = "black"; ctx.stroke();
+        };
+        drawPerson(150,70,'male',true); drawPerson(260,70,'female',false);
+        drawPerson(120,160,'female',false); drawPerson(200,160,'male',true);
+        drawPerson(280,160,'female',false); drawPerson(370,160,'male',true);
+        drawPerson(170,250,'female',true); drawPerson(250,250,'male',false);
+        // 连线
+        ctx.beginPath(); ctx.moveTo(150,82); ctx.lineTo(260,82); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(200,130); ctx.lineTo(280,130); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(185,118); ctx.lineTo(135,92); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(300,118); ctx.lineTo(275,92); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(170,220); ctx.lineTo(200,180); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(250,220); ctx.lineTo(280,180); ctx.stroke();
+        ctx.font = "bold 14px 'Segoe UI'"; ctx.fillStyle = "#2D5720";
+        ctx.fillText("Ⅰ", 125,45); ctx.fillText("Ⅱ", 95,135); ctx.fillText("Ⅲ", 145,225);
+        ctx.fillText("1", 145,45); ctx.fillText("2", 255,45);
+        ctx.fillText("3", 195,135); ctx.fillText("4", 275,135); ctx.fillText("5", 365,135);
+        ctx.fillText("7", 165,225); ctx.fillText("8", 245,225);
+        ctx.fillStyle = "#B34E1A"; ctx.font = "12px sans-serif";
+        ctx.fillText("● 患病女性   ■ 患病男性", 400,260);
+    }
 
-            // 题目标题区
-            const titleDiv = document.createElement('div');
-            titleDiv.className = 'question-title';
-            titleDiv.innerHTML = `<span class="q-num">第 ${i+1} 题</span><span class="question-text">${q.text}</span>`;
-            
-            // 选项区
-            const optionsDiv = document.createElement('div');
-            optionsDiv.className = 'options';
-            const optionLetters = ['A', 'B', 'C', 'D'];
-            for (let idx = 0; idx < q.options.length; idx++) {
-                const optVal = optionLetters[idx];
-                const optionLabel = document.createElement('label');
-                optionLabel.className = 'option';
-                const radio = document.createElement('input');
-                radio.type = 'radio';
-                radio.name = `q${i}`;
+    // 选择题小图重绘 (更符合内容)
+    function drawPlantCellSimple(ctx, w, h) { // 用于选择题
+        ctx.fillStyle = "#FFF3E0"; ctx.fillRect(0,0,w,h);
+        ctx.fillStyle = "#8B5A2B"; ctx.strokeRect(5,5,w-10,h-10);
+        ctx.fillStyle = "#A8D08D"; ctx.beginPath(); ctx.ellipse(50,40,20,15,0,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#2E6B2E"; ctx.fillText("①",25,20);
+        ctx.fillStyle = "#5E7632"; ctx.fillText("细胞壁",8,25);
+        ctx.fillStyle = "black"; ctx.fillText("叶绿体",45,35);
+    }
+    function drawEnzymeCurve(ctx, w, h) {
+        ctx.fillStyle = "#FFF8E7"; ctx.fillRect(0,0,w,h);
+        ctx.beginPath(); ctx.moveTo(20,h-20); ctx.lineTo(w-10,h-20); ctx.lineTo(w-15,20); ctx.fillStyle = "#E0E0E0"; ctx.fill();
+        ctx.fillStyle = "#FFA726"; ctx.fillRect(60,30,15,40);
+        ctx.fillStyle = "#D32F2F"; ctx.fillText("a",65,35);
+        ctx.fillStyle = "#555"; ctx.fillText("温度", w-35, h-8); ctx.fillText("酶活性", 8, 18);
+        ctx.fillText("低温抑制", 50, 85);
+    }
+    function drawPedigreeSimple(ctx, w, h) {
+        ctx.fillStyle = "#FAF0E6"; ctx.fillRect(0,0,w,h);
+        ctx.fillStyle = "#333"; ctx.fillRect(30,20,15,15); ctx.beginPath(); ctx.arc(70,27,8,0,2*Math.PI); ctx.fill();
+        ctx.fillStyle = "#000"; ctx.fillRect(30,20,15,15); ctx.beginPath(); ctx.arc(70,27,8,0,2*Math.PI); ctx.fill();
+        ctx.fillRect(50,60,15,15); ctx.fillRect(90,60,15,15);
+        ctx.fillStyle = "#FFF"; ctx.fillRect(50,60,15,15); ctx.fillRect(90,60,15,15);
+        ctx.fillStyle = "#000"; ctx.fillText("Ⅰ",20,18); ctx.fillText("Ⅱ",42,58);
+    }
+    function drawPhotosynthesisSimple(ctx, w, h) {
+        ctx.fillStyle = "#E8F5E9"; ctx.fillRect(0,0,w,h);
+        ctx.fillStyle = "#81C784"; ctx.fillRect(15,15,60,40); ctx.fillStyle = "#388E3C"; ctx.fillText("光反应",25,35);
+        ctx.fillStyle = "#AED581"; ctx.fillRect(100,15,60,40); ctx.fillText("暗反应",115,35);
+        ctx.beginPath(); ctx.moveTo(75,35); ctx.lineTo(95,35); ctx.stroke(); ctx.fillStyle = "#1B5E20";
+        ctx.fillText("②",85,28); ctx.fillText("ATP",85,45);
+    }
+    function drawMembraneModel(ctx, w, h) {
+        ctx.fillStyle = "#FFF2E0"; ctx.fillRect(0,0,w,h);
+        for(let i=0;i<4;i++) ctx.fillRect(15,20+10*i,110,3);
+        ctx.fillStyle = "#FFB74D"; ctx.fillRect(60,35,15,12); ctx.fillStyle = "#BF360C"; ctx.fillText("③",65,45);
+        ctx.fillStyle = "#5D4037"; ctx.fillText("磷脂双分子层",25,70);
+    }
+
+    // 选择题渲染 (带图形)
+    function renderChoices() {
+        const container = document.getElementById("choiceContainer");
+        container.innerHTML = "";
+        choiceQuestions.forEach((q, idx) => {
+            const card = document.createElement("div");
+            card.className = "question-card";
+            if (choiceSubmitted && choiceSelections[idx] && choiceSelections[idx] !== q.answer) card.classList.add("error-card");
+            const header = document.createElement("div");
+            header.className = "q-header";
+            header.innerHTML = `<span class="q-num">第${idx+1}题</span><span class="question-text">${q.text}</span>`;
+            card.appendChild(header);
+            if (q.hasGraphic) {
+                const graphicDiv = document.createElement("div");
+                graphicDiv.className = "question-graphic";
+                const canvas = document.createElement("canvas");
+                canvas.width = 180; canvas.height = 90;
+                canvas.style.width = "180px"; canvas.style.height = "90px";
+                const ctx = canvas.getContext("2d");
+                if (q.hasGraphic === "plantCellSimple") drawPlantCellSimple(ctx, 180, 90);
+                else if (q.hasGraphic === "enzymeCurve") drawEnzymeCurve(ctx, 180, 90);
+                else if (q.hasGraphic === "pedigreeSimple") drawPedigreeSimple(ctx, 180, 90);
+                else if (q.hasGraphic === "photosynthesisSimple") drawPhotosynthesisSimple(ctx, 180, 90);
+                else if (q.hasGraphic === "membraneModel") drawMembraneModel(ctx, 180, 90);
+                graphicDiv.appendChild(canvas);
+                card.appendChild(graphicDiv);
+            }
+            const optsDiv = document.createElement("div");
+            optsDiv.className = "options";
+            const letters = ["A","B","C","D"];
+            q.options.forEach((opt, optIdx) => {
+                const optVal = letters[optIdx];
+                const label = document.createElement("label");
+                label.className = "option";
+                const radio = document.createElement("input");
+                radio.type = "radio";
+                radio.name = `choice_${idx}`;
                 radio.value = optVal;
-                radio.addEventListener('change', (function(questionIndex, selectedVal) {
-                    return function() {
-                        if (!submitted) {
-                            userSelections[questionIndex] = selectedVal;
-                        } else {
-                            // 如果已经提交，再修改需重新刷新标记？可提醒或自动重置提交状态？为了体验，重新选择后可清除提交标志并重新渲染
-                            // 为方便用户，重新选择时清除批改状态
-                            if(submitted){
-                                submitted = false;
-                                clearErrorStylesAndScore();
-                                renderQuestions();
-                                // 需要恢复已有的用户选择值，注意更新DOM里radio的checked状态（重新渲染后会保留userSelections）
-                                restoreRadioStates();
-                            }else{
-                                userSelections[questionIndex] = selectedVal;
-                            }
-                        }
-                    };
-                })(i, optVal));
-                // 回显已选
-                if (userSelections[i] === optVal && !submitted) {
-                    radio.checked = true;
-                } else if (submitted && userSelections[i] === optVal){
-                    radio.checked = true;
-                }
-                optionLabel.appendChild(radio);
-                optionLabel.appendChild(document.createTextNode(`${optVal}. ${q.options[idx]}`));
-                optionsDiv.appendChild(optionLabel);
-            }
-            
-            card.appendChild(titleDiv);
-            card.appendChild(optionsDiv);
-            
-            // 如果已经提交且错误，显示正确答案反馈
-            if (submitted && userSelections[i] !== null && userSelections[i] !== q.answer) {
-                const feedbackDiv = document.createElement('div');
-                feedbackDiv.className = 'feedback';
+                radio.addEventListener("change", ((i,val)=>()=>{
+                    if(!choiceSubmitted) choiceSelections[i] = val;
+                    else { choiceSubmitted = false; renderChoices(); restoreChoiceRadios(); updateChoiceScore(); }
+                })(idx, optVal));
+                if(choiceSelections[idx] === optVal) radio.checked = true;
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(`${optVal}. ${opt}`));
+                optsDiv.appendChild(label);
+            });
+            card.appendChild(optsDiv);
+            if (choiceSubmitted && choiceSelections[idx] && choiceSelections[idx] !== q.answer) {
+                const fb = document.createElement("div");
+                fb.className = "feedback";
                 const correctLetter = q.answer;
-                const correctText = q.options[optionLetters.indexOf(correctLetter)];
-                feedbackDiv.innerHTML = `<span class="wrong-mark">❌ 错误</span> <span class="correct-answer">正确答案：${correctLetter}. ${correctText}</span>`;
-                card.appendChild(feedbackDiv);
-            } else if (submitted && userSelections[i] === q.answer && userSelections[i] !== null) {
-                const feedbackDiv = document.createElement('div');
-                feedbackDiv.className = 'feedback';
-                feedbackDiv.innerHTML = `<span style="color:#2b6e2f;">✅ 正确</span>`;
-                card.appendChild(feedbackDiv);
+                const correctText = q.options[letters.indexOf(correctLetter)];
+                fb.innerHTML = `<span class="wrong-mark">❌ 错误 | 正确答案: ${correctLetter}. ${correctText}</span>`;
+                card.appendChild(fb);
+            } else if (choiceSubmitted && choiceSelections[idx] === q.answer) {
+                const fb = document.createElement("div");
+                fb.className = "feedback";
+                fb.innerHTML = `<span style="color:#2c6e2c;">✅ 正确</span>`;
+                card.appendChild(fb);
             }
-            questionsContainer.appendChild(card);
-        }
+            container.appendChild(card);
+        });
     }
-    
-    function restoreRadioStates() {
-        // 重新渲染后需要设置radio的checked状态
-        for (let i = 0; i < QUESTIONS_DATA.length; i++) {
-            const selected = userSelections[i];
-            if (selected) {
-                const radios = document.getElementsByName(`q${i}`);
-                for (let r of radios) {
-                    if (r.value === selected) {
-                        r.checked = true;
-                        break;
-                    }
-                }
+    function restoreChoiceRadios() {
+        for(let i=0;i<choiceQuestions.length;i++){
+            const sel = choiceSelections[i];
+            if(sel){
+                const radios = document.getElementsByName(`choice_${i}`);
+                for(let r of radios) if(r.value === sel) r.checked=true;
             }
         }
     }
-    
-    function clearErrorStylesAndScore() {
-        // 重置后，重新渲染前 submitted = false，渲染里不再标记错误类和反馈。
-        scoreSpan.innerText = '—';
+    function updateChoiceScore(){
+        const span = document.getElementById("choiceScoreDisplay");
+        if(choiceSubmitted){
+            let correct=0;
+            for(let i=0;i<choiceQuestions.length;i++) if(choiceSelections[i] === choiceQuestions[i].answer) correct++;
+            span.innerText = `✅ 选择题得分: ${correct*2} / 50`;
+        } else span.innerText = `✅ 选择题得分: -- / 50`;
     }
-    
-    // 计算得分并更新显示，返回得分
-    function calculateScore() {
-        let correctCount = 0;
-        for (let i = 0; i < QUESTIONS_DATA.length; i++) {
-            if (userSelections[i] && userSelections[i] === QUESTIONS_DATA[i].answer) {
-                correctCount++;
-            }
-        }
-        return correctCount;
-    }
-    
-    // 提交批改函数
-    function submitExam() {
-        // 检查所有题目是否全部作答？
+    function submitChoice(){
         let unanswered = false;
-        for (let i = 0; i < QUESTIONS_DATA.length; i++) {
-            if (!userSelections[i]) {
-                unanswered = true;
-                break;
-            }
-        }
-        if (unanswered) {
-            if (!confirm("⚠️ 还有未作答的题目，是否继续提交？未答题目将自动判为错误。")) {
-                return;
-            }
-        }
-        submitted = true;
-        const score = calculateScore();
-        scoreSpan.innerText = `${score}`;
-        renderQuestions();   // 重新渲染标记错误和显示正确答案
-        // 重新绑定radio change后需要恢复选中的值（render里已根据userSelections重设checked）
-        restoreRadioStates();
-        // 滚动至顶部提示
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        for(let i=0;i<choiceQuestions.length;i++) if(!choiceSelections[i]) { unanswered=true; break; }
+        if(unanswered && !confirm("还有未作答的选择题，未答按错误处理，是否继续提交？")) return;
+        choiceSubmitted = true;
+        let correct=0;
+        for(let i=0;i<choiceQuestions.length;i++) if(choiceSelections[i] === choiceQuestions[i].answer) correct++;
+        document.getElementById("choiceScoreDisplay").innerText = `✅ 选择题得分: ${correct*2} / 50`;
+        renderChoices();
+        restoreChoiceRadios();
+        window.scrollTo({top:0, behavior:"smooth"});
     }
-    
-    // 重置清空所有答案
-    function resetExam() {
-        userSelections = new Array(100).fill(null);
-        submitted = false;
-        scoreSpan.innerText = '—';
-        renderQuestions();
-        // 所有radio未选中
+    function resetChoices(){
+        choiceSelections.fill(null);
+        choiceSubmitted = false;
+        document.getElementById("choiceScoreDisplay").innerText = `✅ 选择题得分: -- / 50`;
+        renderChoices();
     }
-    
-    // 绑定事件
-    submitBtn.addEventListener('click', submitExam);
-    resetBtn.addEventListener('click', resetExam);
-    
-    // 初始化渲染
-    renderQuestions();
+
+    window.onload = () => {
+        drawPlantCellDetailed();
+        drawPedigreeDetailed();
+        buildAllFillInputs();
+        renderAnswerReference();
+        renderChoices();
+        document.getElementById("submitChoiceBtn").addEventListener("click", submitChoice);
+        document.getElementById("resetChoiceBtn").addEventListener("click", resetChoices);
+        document.getElementById("clearAllFillBtn").addEventListener("click", clearAllFill);
+    };
+    window.addEventListener("resize", () => { drawPlantCellDetailed(); drawPedigreeDetailed(); });
 </script>
 </body>
 </html>
